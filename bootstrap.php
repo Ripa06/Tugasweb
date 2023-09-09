@@ -542,28 +542,77 @@ Formulis Berhasil Dikirim
 </div>
 
 
-
-<div class="mb-3">
-  <input type="radio">
-  <label for="komplain"></label>
+<div class="mb-3 form-check">
+<input type="radio" class="form-check-input" id="komplain" name="kategori">
+<label for="komplain" class="form-check-label">Komplain
+</label>
+</div>
+ 
+<div class="mb-3 form-check">
+<input type="radio" class="form-check-input" id="saran" name="kategori">
+<label for="saran" class="form-check-label">Saran
+</label>
 </div>
 
- for="exampleFormControlTextarea1" class="form-label">Deskripsi</label>
-
-<textarea class="form-control" id="exampleFormnControlTextarea1" rows="5"></textarea>
-  </div>
-
-
-  </div>
-
 <div class="mb-3">
-<div class="container">
-<button class="btn btn-primary w-100">kirim</button>
+<label for="deskripsi" class="form-label">Deskripsi</label>
+<textarea id="deskripsi" class="form-control" clos="30" rows="10"></textarea>
 </div>
 
+<div class="mb-3"> 
+<button type="button" id="btnKirim" onclick="simpanForm()" class="btn btn-primary w-100">Kirim</button>
+<button type="button" id="btnLoading" class="btn btn-primary w-100 mt-2" disabled>
+<div class="spinner-border spinner-border-sm" role="status"></div>
+</button>
+</div> 
+</from>
+</div>
+</div>
+</div>
 
-  </form>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+<script>
+onst popoverTriggerList=
+
+ document.query
+document.getElementById('myAlert');
+
+myAlert.style.display = 'none' 
+
+function myFunction(){
+myAlert.style.display = 'block'
+}
+ 
+var btnKirim = document.getElementById('btnKirim');
+var btnLoading = document.getElementById('btnLoading');
+
+btnLoading.style.display = 'none';
+
+function startProses(){
+btnKirim.style.display = 'none';
+btnLoading.style.display = 'block';
+}
+
+function endProses(){
+btnLoading.style.display = 'none';
+btnKirim.style.display = 'block';
+}
+
+function simpanForm(){ 
+startProses();
+
+setTimeout(function(){
+endProses(); myFunction();
+}, 3000);
+}
+</script>
+
+ </body>
+
+</html>
+
+
   </body>
 </html>""""""
